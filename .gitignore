@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+knowledge/snapshots/
+*.db-shm
+*.db-wal
