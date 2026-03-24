@@ -1,8 +1,14 @@
 .env
-__pycache__/
+.env.*
+**/__pycache__/
 *.pyc
 *.pyo
 .DS_Store
 knowledge/snapshots/
+*.db
 *.db-shm
 *.db-wal
+venv/
+.venv/
+env/
+.python-version
