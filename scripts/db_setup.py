@@ -10,17 +10,20 @@ SCHEMA_PATH = ROOT / "schema.sql"
 
 
 def setup():
+    if not SCHEMA_PATH.exists():
+        raise FileNotFoundError(f"Schema file not found: {SCHEMA_PATH}")
+
     schema = SCHEMA_PATH.read_text()
     with sqlite3.connect(DB_PATH) as conn:
+        conn.execute("PRAGMA foreign_keys = ON")
         conn.executescript(schema)
         conn.commit()
-    print(f"Database ready: {DB_PATH}")
 
-    # Verify tables were created
-    with sqlite3.connect(DB_PATH) as conn:
         tables = conn.execute(
             "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name"
         ).fetchall()
+
+    print(f"Database ready: {DB_PATH}")
     print("Tables:", [t[0] for t in tables])
 
 
