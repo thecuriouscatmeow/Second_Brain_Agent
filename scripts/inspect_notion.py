@@ -14,38 +14,54 @@ from notion_client import Client
 
 load_dotenv(Path(__file__).parent.parent / ".env")
 
-notion = Client(auth=os.environ["NOTION_TOKEN"])
+_token = os.environ.get("NOTION_TOKEN")
+if not _token:
+    raise SystemExit("ERROR: NOTION_TOKEN not set. Add it to your .env file.")
+
+notion = Client(auth=_token)
 
 
 def inspect_workspace():
     report = {"databases": []}
 
-    # Search for all databases the integration has access to
-    results = notion.search(filter={"property": "object", "value": "database"})
+    # Paginate through all databases the integration has access to
+    cursor = None
+    while True:
+        kwargs = {"filter": {"property": "object", "value": "database"}, "page_size": 100}
+        if cursor:
+            kwargs["start_cursor"] = cursor
+        response = notion.search(**kwargs)
 
-    for db in results["results"]:
-        db_id = db["id"]
-        db_title = _get_title(db.get("title", []))
-        properties = {}
+        for db in response["results"]:
+            db_id = db["id"]
+            db_title = _get_title(db.get("title", []))
+            properties = {}
 
-        for prop_name, prop_data in db.get("properties", {}).items():
-            properties[prop_name] = prop_data["type"]
+            for prop_name, prop_data in db.get("properties", {}).items():
+                properties[prop_name] = prop_data.get("type", "<unknown>")
 
-        # Fetch 3 sample records
-        sample_rows = []
-        rows = notion.databases.query(database_id=db_id, page_size=3)
-        for page in rows["results"]:
-            sample = {"id": page["id"], "properties": {}}
-            for prop_name, prop_data in page.get("properties", {}).items():
-                sample["properties"][prop_name] = _extract_value(prop_data)
-            sample_rows.append(sample)
+            # Fetch 3 sample records
+            sample_rows = []
+            try:
+                rows = notion.databases.query(database_id=db_id, page_size=3)
+                for page in rows["results"]:
+                    sample = {"id": page["id"], "properties": {}}
+                    for prop_name, prop_data in page.get("properties", {}).items():
+                        sample["properties"][prop_name] = _extract_value(prop_data)
+                    sample_rows.append(sample)
+            except Exception as e:
+                sample_rows = [{"error": str(e)}]
 
-        report["databases"].append({
-            "id": db_id,
-            "title": db_title,
-            "properties": properties,
-            "sample_records": sample_rows,
-        })
+            report["databases"].append({
+                "id": db_id,
+                "title": db_title,
+                "properties": properties,
+                "sample_records": sample_rows,
+            })
+
+        if not response.get("has_more"):
+            break
+        cursor = response["next_cursor"]
 
     return report
 
@@ -73,6 +89,8 @@ def _extract_value(prop):
         return prop.get("checkbox")
     elif t == "url":
         return prop.get("url")
+    elif t == "number":
+        return prop.get("number")
     elif t == "status":
         s = prop.get("status")
         return s["name"] if s else None

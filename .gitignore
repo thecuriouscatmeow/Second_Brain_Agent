@@ -12,3 +12,4 @@ venv/
 .venv/
 env/
 .python-version
+notion_structure_report.json
