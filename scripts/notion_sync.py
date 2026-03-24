@@ -123,13 +123,13 @@ def _get_title(prop: dict) -> str:
 
 def upsert_row(conn: sqlite3.Connection, table: str, row: dict):
     """Insert or update a row, matching on notion_id."""
-    # Build upsert: insert on conflict update all non-id fields
     cols = ", ".join(row.keys())
     placeholders = ", ".join("?" * len(row))
-    updates = ", ".join(f"{k}=excluded.{k}" for k in row if k != "id")
+    # On conflict: update all fields except the stable identifiers
+    updates = ", ".join(f"{k}=excluded.{k}" for k in row if k not in ("id", "notion_id"))
     sql = f"""
         INSERT INTO {table} ({cols}) VALUES ({placeholders})
-        ON CONFLICT(id) DO UPDATE SET {updates}
+        ON CONFLICT(notion_id) DO UPDATE SET {updates}
     """
     conn.execute(sql, list(row.values()))
 

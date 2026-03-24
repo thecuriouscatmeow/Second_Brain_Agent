@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS knowledge_resources (
     content TEXT,
     summary TEXT,
     tags TEXT CHECK (tags IS NULL OR json_valid(tags)),           -- JSON array e.g. '["seo","research"]'
-    notion_id TEXT,      -- Notion page ID for sync tracking
+    notion_id TEXT UNIQUE,      -- Notion page ID for sync tracking
     created_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')),
     updated_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now'))
 );
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS projects (
     name TEXT NOT NULL,
     status TEXT CHECK (status IN ('active', 'completed', 'archived')),         -- 'active', 'completed', 'archived'
     description TEXT,
-    notion_id TEXT,
+    notion_id TEXT UNIQUE,
     started_at TEXT,
     completed_at TEXT,
     updated_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now'))
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS tasks (
     title TEXT NOT NULL,
     status TEXT CHECK (status IN ('todo', 'in_progress', 'done')),         -- 'todo', 'in_progress', 'done'
     priority TEXT CHECK (priority IN ('low', 'medium', 'high')),       -- 'low', 'medium', 'high'
-    notion_id TEXT,
+    notion_id TEXT UNIQUE,
     due_date TEXT,
     created_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')),
     updated_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now'))
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS decisions (
     decision TEXT,       -- What was decided
     outcome TEXT,        -- What happened
     lessons TEXT,        -- What to apply next time
-    notion_id TEXT,
+    notion_id TEXT UNIQUE,
     decided_at TEXT,
     updated_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now'))
 );
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS experiments (
     method TEXT,
     results TEXT,
     conclusion TEXT,
-    notion_id TEXT,
+    notion_id TEXT UNIQUE,
     started_at TEXT,
     completed_at TEXT,
     updated_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now'))
