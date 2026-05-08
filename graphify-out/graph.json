@@ -1,0 +1,457 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "inspect_notion.py",
+      "file_type": "code",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/inspect_notion.py",
+      "source_location": "L1",
+      "id": "users_thecuriousbox_life_os_notes_scripts_inspect_notion_py",
+      "community": 1,
+      "norm_label": "inspect_notion.py"
+    },
+    {
+      "label": "inspect_workspace()",
+      "file_type": "code",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/inspect_notion.py",
+      "source_location": "L24",
+      "id": "inspect_notion_inspect_workspace",
+      "community": 1,
+      "norm_label": "inspect_workspace()"
+    },
+    {
+      "label": "_get_title()",
+      "file_type": "code",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/inspect_notion.py",
+      "source_location": "L69",
+      "id": "inspect_notion_get_title",
+      "community": 1,
+      "norm_label": "_get_title()"
+    },
+    {
+      "label": "_extract_value()",
+      "file_type": "code",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/inspect_notion.py",
+      "source_location": "L73",
+      "id": "inspect_notion_extract_value",
+      "community": 1,
+      "norm_label": "_extract_value()"
+    },
+    {
+      "label": "Extract a readable value from a Notion property.",
+      "file_type": "rationale",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/inspect_notion.py",
+      "source_location": "L74",
+      "id": "inspect_notion_rationale_74",
+      "community": 1,
+      "norm_label": "extract a readable value from a notion property."
+    },
+    {
+      "label": "notion_sync.py",
+      "file_type": "code",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L1",
+      "id": "users_thecuriousbox_life_os_notes_scripts_notion_sync_py",
+      "community": 0,
+      "norm_label": "notion_sync.py"
+    },
+    {
+      "label": "sync_all()",
+      "file_type": "code",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L38",
+      "id": "notion_sync_sync_all",
+      "community": 0,
+      "norm_label": "sync_all()"
+    },
+    {
+      "label": "sync_database()",
+      "file_type": "code",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L55",
+      "id": "notion_sync_sync_database",
+      "community": 0,
+      "norm_label": "sync_database()"
+    },
+    {
+      "label": "map_page_to_row()",
+      "file_type": "code",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L81",
+      "id": "notion_sync_map_page_to_row",
+      "community": 0,
+      "norm_label": "map_page_to_row()"
+    },
+    {
+      "label": "_get_title()",
+      "file_type": "code",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L118",
+      "id": "notion_sync_get_title",
+      "community": 2,
+      "norm_label": "_get_title()"
+    },
+    {
+      "label": "upsert_row()",
+      "file_type": "code",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L124",
+      "id": "notion_sync_upsert_row",
+      "community": 3,
+      "norm_label": "upsert_row()"
+    },
+    {
+      "label": "log_sync()",
+      "file_type": "code",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L137",
+      "id": "notion_sync_log_sync",
+      "community": 0,
+      "norm_label": "log_sync()"
+    },
+    {
+      "label": "Sync all pages from a Notion database into a SQLite table.",
+      "file_type": "rationale",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L56",
+      "id": "notion_sync_rationale_56",
+      "community": 0,
+      "norm_label": "sync all pages from a notion database into a sqlite table."
+    },
+    {
+      "label": "Map a Notion page to a SQLite row.      TODO: After running inspect_notion.py, a",
+      "file_type": "rationale",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L82",
+      "id": "notion_sync_rationale_82",
+      "community": 0,
+      "norm_label": "map a notion page to a sqlite row.      todo: after running inspect_notion.py, a"
+    },
+    {
+      "label": "Extract plain text from a Notion title or rich_text property.",
+      "file_type": "rationale",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L119",
+      "id": "notion_sync_rationale_119",
+      "community": 2,
+      "norm_label": "extract plain text from a notion title or rich_text property."
+    },
+    {
+      "label": "Insert or update a row, matching on notion_id.",
+      "file_type": "rationale",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L125",
+      "id": "notion_sync_rationale_125",
+      "community": 3,
+      "norm_label": "insert or update a row, matching on notion_id."
+    },
+    {
+      "label": "Record a sync event in sync_log.",
+      "file_type": "rationale",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L138",
+      "id": "notion_sync_rationale_138",
+      "community": 0,
+      "norm_label": "record a sync event in sync_log."
+    },
+    {
+      "label": "db_setup.py",
+      "file_type": "code",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/db_setup.py",
+      "source_location": "L1",
+      "id": "users_thecuriousbox_life_os_notes_scripts_db_setup_py",
+      "community": 4,
+      "norm_label": "db_setup.py"
+    },
+    {
+      "label": "setup()",
+      "file_type": "code",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/db_setup.py",
+      "source_location": "L12",
+      "id": "db_setup_setup",
+      "community": 4,
+      "norm_label": "setup()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/inspect_notion.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_src": "users_thecuriousbox_life_os_notes_scripts_inspect_notion_py",
+      "_tgt": "inspect_notion_inspect_workspace",
+      "source": "users_thecuriousbox_life_os_notes_scripts_inspect_notion_py",
+      "target": "inspect_notion_inspect_workspace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/inspect_notion.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_src": "users_thecuriousbox_life_os_notes_scripts_inspect_notion_py",
+      "_tgt": "inspect_notion_get_title",
+      "source": "users_thecuriousbox_life_os_notes_scripts_inspect_notion_py",
+      "target": "inspect_notion_get_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/inspect_notion.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_src": "users_thecuriousbox_life_os_notes_scripts_inspect_notion_py",
+      "_tgt": "inspect_notion_extract_value",
+      "source": "users_thecuriousbox_life_os_notes_scripts_inspect_notion_py",
+      "target": "inspect_notion_extract_value",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/inspect_notion.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_src": "inspect_notion_inspect_workspace",
+      "_tgt": "inspect_notion_get_title",
+      "source": "inspect_notion_inspect_workspace",
+      "target": "inspect_notion_get_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/inspect_notion.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_src": "inspect_notion_inspect_workspace",
+      "_tgt": "inspect_notion_extract_value",
+      "source": "inspect_notion_inspect_workspace",
+      "target": "inspect_notion_extract_value",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/inspect_notion.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_src": "inspect_notion_extract_value",
+      "_tgt": "inspect_notion_get_title",
+      "source": "inspect_notion_get_title",
+      "target": "inspect_notion_extract_value",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/inspect_notion.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_src": "inspect_notion_rationale_74",
+      "_tgt": "inspect_notion_extract_value",
+      "source": "inspect_notion_extract_value",
+      "target": "inspect_notion_rationale_74",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_src": "users_thecuriousbox_life_os_notes_scripts_notion_sync_py",
+      "_tgt": "notion_sync_sync_all",
+      "source": "users_thecuriousbox_life_os_notes_scripts_notion_sync_py",
+      "target": "notion_sync_sync_all",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_src": "users_thecuriousbox_life_os_notes_scripts_notion_sync_py",
+      "_tgt": "notion_sync_sync_database",
+      "source": "users_thecuriousbox_life_os_notes_scripts_notion_sync_py",
+      "target": "notion_sync_sync_database",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_src": "users_thecuriousbox_life_os_notes_scripts_notion_sync_py",
+      "_tgt": "notion_sync_map_page_to_row",
+      "source": "users_thecuriousbox_life_os_notes_scripts_notion_sync_py",
+      "target": "notion_sync_map_page_to_row",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "_src": "users_thecuriousbox_life_os_notes_scripts_notion_sync_py",
+      "_tgt": "notion_sync_get_title",
+      "source": "users_thecuriousbox_life_os_notes_scripts_notion_sync_py",
+      "target": "notion_sync_get_title",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "_src": "users_thecuriousbox_life_os_notes_scripts_notion_sync_py",
+      "_tgt": "notion_sync_upsert_row",
+      "source": "users_thecuriousbox_life_os_notes_scripts_notion_sync_py",
+      "target": "notion_sync_upsert_row",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "_src": "users_thecuriousbox_life_os_notes_scripts_notion_sync_py",
+      "_tgt": "notion_sync_log_sync",
+      "source": "users_thecuriousbox_life_os_notes_scripts_notion_sync_py",
+      "target": "notion_sync_log_sync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_src": "notion_sync_sync_all",
+      "_tgt": "notion_sync_sync_database",
+      "source": "notion_sync_sync_all",
+      "target": "notion_sync_sync_database",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_src": "notion_sync_sync_all",
+      "_tgt": "notion_sync_log_sync",
+      "source": "notion_sync_sync_all",
+      "target": "notion_sync_log_sync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_src": "notion_sync_sync_database",
+      "_tgt": "notion_sync_map_page_to_row",
+      "source": "notion_sync_sync_database",
+      "target": "notion_sync_map_page_to_row",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_src": "notion_sync_sync_database",
+      "_tgt": "notion_sync_upsert_row",
+      "source": "notion_sync_sync_database",
+      "target": "notion_sync_upsert_row",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_src": "notion_sync_rationale_56",
+      "_tgt": "notion_sync_sync_database",
+      "source": "notion_sync_sync_database",
+      "target": "notion_sync_rationale_56",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_src": "notion_sync_rationale_82",
+      "_tgt": "notion_sync_map_page_to_row",
+      "source": "notion_sync_map_page_to_row",
+      "target": "notion_sync_rationale_82",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_src": "notion_sync_rationale_119",
+      "_tgt": "notion_sync_get_title",
+      "source": "notion_sync_get_title",
+      "target": "notion_sync_rationale_119",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_src": "notion_sync_rationale_125",
+      "_tgt": "notion_sync_upsert_row",
+      "source": "notion_sync_upsert_row",
+      "target": "notion_sync_rationale_125",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/notion_sync.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "_src": "notion_sync_rationale_138",
+      "_tgt": "notion_sync_log_sync",
+      "source": "notion_sync_log_sync",
+      "target": "notion_sync_rationale_138",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/Users/thecuriousbox/Life_OS/Notes/scripts/db_setup.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_src": "users_thecuriousbox_life_os_notes_scripts_db_setup_py",
+      "_tgt": "db_setup_setup",
+      "source": "users_thecuriousbox_life_os_notes_scripts_db_setup_py",
+      "target": "db_setup_setup",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}
